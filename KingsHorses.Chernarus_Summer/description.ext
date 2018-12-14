@@ -1,0 +1,41 @@
+class header {
+	gametype = COOP;
+	minplayers = 1;
+	maxplayers = 165;
+	playerCountMultipleOf = 1;  //Coop type missions use 1, Team type missions use 2
+};
+
+author = "Spearhead Gaming";
+onLoadMission = "Murica. Fuck yeah";
+onLoadName = "Kings Horses v6";
+
+respawn = "BASE";
+//respawnTemplates[] = {"MenuPosition"};
+RespawnDialog = 0;
+respawnDelay  = 30;
+aikills = 1;
+disabledAI = 1;
+enableDebugConsole=1;
+corpseManagerMode = 2;
+
+
+class CfgFunctions
+{
+	#include "sux_load\cfgFunctions.hpp"
+	#include "vip_cmn\fn\vip_cmn_fnc.hpp"
+	class kh
+	{
+		class mission_stuff
+		{
+			file = "fnc";
+			class disable_sim { recompile = 1; };
+			class make_medic { recompile = 1; };
+		};
+	};
+};
+#include "R3F_LOG\desc_include.h"
+
+class CfgSounds 
+{
+	#include "vip_lit\resource\vip_lit_cfgSounds.hpp"
+};
